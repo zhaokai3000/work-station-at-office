@@ -1,0 +1,47 @@
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.0'
+    println 'gradle wrapper version 2.0'
+}
+
+def dest = "dest"
+task copy(type: Copy) {
+    from "source"
+    into dest
+    println dest
+}
+
+task hello {
+    println 'task hello'
+    println project.name
+    println project.path
+    doLast {
+        println 'task hello doLast action'
+    }
+}
+
+task compile << {
+    println 'compiling source'
+
+    println 'gradleProp:'+gradleProp
+}
+
+task compileTest(dependsOn:compile) << {
+    println 'compiling unit tests'
+}
+
+task test(dependsOn: [compile, compileTest]) << {
+    println 'running unit tests'
+}
+
+task dist(dependsOn: [compile, test]) << {
+    println 'building the distribution'
+}
+
+task testclosure << {
+    repositories {
+        println "in a closure 1"
+    }
+    repositories() { println "in a closure 2" }
+    repositories({ println "in a closure 3" })
+    repositories()
+}

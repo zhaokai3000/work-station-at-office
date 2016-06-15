@@ -1,0 +1,5 @@
+description = 'Sub project number 1'
+
+task task1 << {
+    println 'sub project task 1'
+}
