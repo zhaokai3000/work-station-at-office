@@ -1,0 +1,50 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="0dp"
+                android:paddingRight="0dp"
+                android:paddingTop="0dp"
+                android:paddingBottom="0dp"
+                android:background="#00000000"
+                tools:context=".TestTVActivity">
+
+    <android.media.tv.TvView
+        android:id="@+id/test_tv_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <Button
+        android:id="@+id/btn_set_av"
+        android:text="@string/btn_set_av"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#E0FFFFFF"
+        android:background="#00000000"/>
+    <Button
+        android:id="@+id/btn_set_hdmi1"
+        android:text="@string/btn_set_hdmi1"
+        android:layout_toRightOf="@id/btn_set_av"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#E0FFFFFF"
+        android:background="#00000000"/>
+
+    <Button
+        android:id="@+id/btn_set_atv"
+        android:text="@string/btn_set_atv"
+        android:layout_toRightOf="@id/btn_set_hdmi1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#E0FFFFFF"
+        android:background="#00000000"/>
+
+    <Button
+        android:id="@+id/btn_set_dtv"
+        android:text="@string/btn_set_dtv"
+        android:layout_toRightOf="@id/btn_set_atv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#E0FFFFFF"
+        android:background="#00000000"/>
+
+</RelativeLayout>
